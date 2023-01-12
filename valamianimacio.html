@@ -1,0 +1,89 @@
+<body>
+    <div id="o1"></div>
+</body>
+<style>
+    body {
+        height: 50px;
+        background-color: aquamarine;
+    }
+    #o1 {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        background-color: bisque;
+        box-shadow: 1px 1px 3px black;
+        transition: 2s;
+        position: absolute;
+        left: 35%;
+        top: 5%;
+    }
+    #o2 {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
+        background-color: rgb(25, 54, 219);
+        box-shadow: 1px 1px 3px black;
+        transition: 3s;
+        position: absolute;
+        right: 35%;
+        top: 90%;
+    }
+</style>
+<script>
+    v = 0
+    o1 = document.getElementById("o1").style
+    setInterval(() => {
+        ([() => {
+            o1.borderRadius = '20%'
+            o1.right = '160%'
+            o1.width = "100px"
+            o1.height = "100px"
+            o1.top = '45%'
+            o1.backgroundColor = "blue"
+        },() => {
+            o1.borderRadius = '35%'
+            o1.right = '10%'
+            o1.top = '16%'
+            o1.width = "20px"
+            o1.height = "20px"
+            o1.backgroundColor = "violet"
+        },() => {
+            o1.left = '20%'
+            o1.top = '80%'
+            o1.width = "30px"
+            o1.height = "30px"
+            o1.backgroundColor = "red"
+        }][v])()
+        v = v < 2 ? v + 1 : 0
+    }, 3000)
+
+    v = 0
+    o2 = document.getElementById("o2").style
+    setInterval(() => {
+        ([() => {
+            o2.borderRadius = '80%'
+            o2.right = '40%'
+            o2.width = "140px"
+            o2.height = "140px"
+            o2.top = '65%'
+            o2.backgroundColor = "green"
+        },() => {
+            o2.borderRadius = '75%'
+            o2.right = '70%'
+            o2.top = '85%'
+            o2.width = "60px"
+            o2.height = "60px"
+            o2.backgroundColor = "yellow"
+        },() => {
+            o2.left = '55%'
+            o2.top = '45%'
+            o2.width = "15px"
+            o2.height = "15px"
+            o2.backgroundColor = "brown"
+        }][v])()
+        v = v < 2 ? v + 1 : 0
+    }, 3000)
+    
+</script>
